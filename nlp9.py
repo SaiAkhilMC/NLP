@@ -5,6 +5,8 @@ warnings.filterwarnings("ignore")
 generator = pipeline('text-generation', model='gpt2')
 set_seed(42)
 
+generator("Hello, I am", max_length=60, num_return_sequences=7) 
+
 question_answerer = pipeline('question-answering')
 
 question_answerer({
